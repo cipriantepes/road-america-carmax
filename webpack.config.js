@@ -1,7 +1,9 @@
+const devMode = process.env.NODE_ENV !== "production"
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
 const path = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
     optimization: {
@@ -36,31 +38,47 @@ module.exports = {
 				}
 			]
 		},{
-			test: /\.(sc|sa|c)ss$/,
+			test: /\.(sc|sa)ss$/,
 			use: [{
 				loader: "style-loader", // inject CSS to page
+                options: {
+                    sourceMap: true
+                }
 			}, {
                 loader: MiniCssExtractPlugin.loader,
             }, {
 				loader: "css-loader", // translates CSS into CommonJS modules
+                options: {
+                    sourceMap: true
+                },
 			}, {
-				loader: "postcss-loader", // Run post css actions
-				options: {
-					plugins: function() { // post css plugins, can be exported to postcss.config.js
-						return [
-							require("precss"),
-							require("autoprefixer")
-						]
-					}
-				}
-			}, {
-                loader: "sass-loader", options: {
+                loader: "resolve-url-loader",
+                options: {
                     sourceMap: true
                 }
+            }, {
+                loader: "sass-loader", options: {
+                    sourceMap: true,
+                    sourceMapContents: false
+                }
 			}]
-		}]
+        }, {
+            test: /.*\.(png|svg|jpe?g|gif)$/,
+            use: [
+                {
+                    loader: "file-loader",
+                    options: {
+                        outputPath: "assets/images",
+                        publicPath: "assets/images",
+                        name: "[name]_[hash:10].[ext]"
+                    }
+                },
+            ]
+        }]
 	},
+    devtool: "source-map",
 	plugins: [
+        new CleanWebpackPlugin(),
 		new HtmlWebPackPlugin({
 			title: "Home",
 			template: "./src/index.html",
@@ -79,19 +97,16 @@ module.exports = {
 		}),
 		new HtmlWebPackPlugin({
 			title: "Step 3",
-			chunks: ["index"],
 			template: "./src/steps.html",
 			filename: "step3.html"
 		}),
 		new HtmlWebPackPlugin({
 			title: "Step 4",
-			chunks: ["index"],
 			template: "./src/steps.html",
 			filename: "step4.html"
 		}),
 		new HtmlWebPackPlugin({
 			title: "Step 5",
-			chunks: ["index"],
 			template: "./src/steps.html",
 			filename: "step5.html"
 		}),
