@@ -1,0 +1,29 @@
+.main__container {
+    background: $white;
+    position: relative;
+    z-index: 1;
+}
+
+.main__footer {
+    font-size: $font-size-base * 1.14285; // 16px
+    background: $gray-500;
+
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    a {
+        color: inherit;
+    }
+}
+@include media-breakpoint-down(lg) {
+    .main__container {
+        max-width: 100%;
+    }
+}
+@include media-breakpoint-up(lg) {
+    .main__container {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, .6);
+    }
+}

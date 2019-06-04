@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CarMax - Road America</title>
+</head>
+
+<body>
+${require("./views/header/header.html")}
+    <main class="site__main home">
+        <div class="container main__container">
+            <div class="row justify-content-center bg-blue-light home__header">
+                <div class="col-md-10 text-center">
+                    <hgroup>
+                        <h1 class="home__title text-capitalize h1">Because roadside assistance should be there any time you need it</h1>
+                        <h2 class="home__subtitle d-none d-lg-block h4">Upgrade to Year-Round Cover from Road America and Get 6 Months Free!</h2>
+                    </hgroup>
+                </div>
+            </div>
+            <div class="row justify-content-center program py-3">
+                <div class="col-lg-10 card-deck d-none d-lg-flex">
+                    <div class="card card--home bg-blue-light border--yellow">
+                        <div class="card-body">
+                            <h5 class="card-title h3 text-center">Excellent Service</h5>
+                            <p class="card-text">Get the same quality Road America service as on-demand roadside assistance, including jump starts, lockout, towing and more.</p>
+                        </div>
+                    </div>
+                    <div class="card card--home bg-blue-light border--yellow">
+                        <div class="card-body">
+                            <h5 class="card-title h3 text-center">Smart Savings</h5>
+                            <p class="card-text">Instead of paying a fee for each service call, you can save hundreds by signing up for a year's worth of coverage all at once for just $89.95</p>
+                        </div>
+                    </div>
+                    <div class="card card--home bg-blue-light border--yellow">
+                        <div class="card-body">
+                            <h5 class="card-title h3 text-center">Amazing Extras</h5>
+                            <p class="card-text">When you sign up today, Road America will extend your coverage by 6 additional months - at zero cost to you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-lg-none">
+                    <img src="${require('./imgs/SUV_bluegrey2.png')}" class="float-right img--home-featured" alt="">
+                    <p class="h2 pt-4">Scroll to claim year-round coverage from Road America and get 6 months free!</p>
+                    <p class="text-center pt-4 mb-0">
+                        <img src="${require('./imgs/Animated_Arrows.gif')}" class="" alt="">
+                    </p>
+                </div>
+
+                <div class="w-100"></div>
+
+                <div class="col-lg-6 order-lg-last program__items text-primary">
+                    <h3 class="py-3 text-center font-weight-normal">Program At a Glance:</h3>
+                    <ul class="program__items__list font-weight-bold">
+                        <li class="program__items__item">Available on CarMax new and used vehicle purchases made after (DATE/YEAR)</li>
+                        <li class="program__items__item">24-Hour Emergency Roadside Assistance</li>
+                        <li class="program__items__item">USA – Canada – Mexico – Puerto Rico</li>
+                        <li class="program__items__item">Light Duty – Medium – Heavy – RV – Motorcycle</li>
+                        <li class="program__items__item">Services include:
+                            <ul class="program__items__sublist">
+                                <li class="program__items__item">
+                                    Tiwing Assistance
+                                    <p class="text-white">When towing is necessary, the covered vehicle will be towed to the nearest qualified service facility or up to (25) miles per occurrence if the vehicle is being towed to the issuing dealership.</p>
+                                </li>
+                                <li class="program__items__item">
+                                    Battery Jump-Start Service
+                                </li>
+                                <li class="program__items__item">
+                                    Flat Tire Assistance
+                                    <p class="text-white">Removal and replacement with covered vehicle's spare.</p>
+                                </li>
+                                <li class="program__items__item">
+                                    Fuel, Oil, Fluid and Water Delivery Service
+                                </li>
+                                <li class="program__items__item">
+                                    Lock-out Assistance
+                                </li>
+                                <li class="program__items__item">
+                                    Driver's Valet
+                                    <p class="text-white">Help in obtaining an emergency replacement rental vehicle from a premier national rental car company.</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary float-right btn--home ml-3" data-step="1">Sign Up Now</button>
+                    <p class="text-white text-right"><strong>$89.95 for 1 year + additional months for free from Road America.</strong></p>
+                </div>
+                <div class="col-lg-6 program__info align-self-center">
+                    <img src="${require('./imgs/SUV_bluegrey2.png')}" class="float-right program__main-img d-none d-lg-block" alt="">
+                    <p class="mt-5"></p>
+                    <p>Nobody plans for a breakdown, accident, or other auto emergency… which is why CarMax and Road America have teamed up to make sure drivers like you are covered no matter what. Your new or used vehicle came with on-demand roadside assistance with no contracts or obligations.</p>
+                    <p>Just call on Road America and we’ll be there - anywhere in the US, Canada, or Mexico. It costs just $69.95 per service request, and it’s excellent peace of mind wherever you drive.</p>
+                    <p>But it’s only the beginning of what Road America makes possible for you. For just $20 more, you’ll receive an entire year of coverage - just $89.95 no matter how many calls you make for covered roadside assistance events. Maybe it’s a dead battery this month, but next month you end up with a flat tire - instead of paying for each event, you’d already be covered at no out of pocket cost.</p>
+                    <p class="text-center clear-both">
+                        <button class="btn btn-primary btn--home" data-step="1">Renew Today</button>
+                    </p>
+                </div>
+            </div>
+            ${require("./views/main/footer.html")}
+        </div>
+    </main>
+${require("./views/footer/footer.html")}
+</body>
+
+</html>

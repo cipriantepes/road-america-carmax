@@ -1,0 +1,106 @@
+.progress--enrollment {
+    border-radius: 0;
+    margin-left: -$font-size-base;
+    margin-right: -$font-size-base;
+    margin-bottom: 2rem;
+    height: 11px;
+    overflow: visible;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 20px;
+    }
+}
+
+.progress__step {
+    font-size: $font-size-base * 0.85; // 12px
+    text-indent: -40%;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-6px);
+    padding-top: 30px;
+
+    &:after {
+        content: '';
+        background: $blue-800;
+        box-shadow: 1px 3px 2px rgba(0, 0, 0, .25);
+        border-radius: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateX(-10px);
+        height: 21px;
+        width: 21px;
+    }
+
+}
+
+.progress__step[data-step-progress="1"] {
+    // left: 15%;
+}
+
+.progress__step[data-step-progress="2"] {
+    // left: 32.5%;
+}
+
+.progress__step[data-step-progress="3"] {
+    // left: 50%;
+}
+
+.progress__step[data-step-progress="4"] {
+    // left: 67.5%;
+}
+
+.progress__step[data-step-progress="5"] {
+    // left: 85%;
+}
+
+.progress__step--active {
+    &:after {
+        background-color: $blue-800;
+    }
+    & ~ .progress__step:after {
+        background-color: $yellow-200;
+    }
+}
+
+.progress--enrollment__current {
+    position: relative;
+    background: $blue-300;
+    transition: width 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.progress__text {
+    display: none;
+}
+
+@include media-breakpoint-down(md) {
+    .progress__step--active[data-step-progress="5"] + .progress--enrollment__current {
+        width: 100% !important;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .progress__text {
+        display: block;
+    }
+
+    .progress--enrollment__current {
+        background: transparent;
+
+        &:after {
+            content: "";
+            background: url("../../imgs/suv-icon.png") no-repeat 0 0;
+            position: absolute;
+            z-index: 1;
+            right: -62px;
+            display: inline-block;
+            width: 95px;
+            height: 40px;
+        }
+    }
+}

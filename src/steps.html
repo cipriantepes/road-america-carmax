@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RA CarMax ${htmlWebpackPlugin.options.title}</title>
+</head>
+
+<body>
+    ${require("./views/header/header.html")}
+    <main class="site__main">
+    ${require("./views/"+htmlWebpackPlugin.options.filename)}
+    </main>
+    ${require("./views/footer/footer.html")}
+</body>
+
+</html>

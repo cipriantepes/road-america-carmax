@@ -1,0 +1,91 @@
+<div class="container main__container">
+    <div class="row justify-content-center py-4">
+        <div class="col">
+            <div class="progress progress--enrollment bg-primary">
+                <div class="one progress__step progress__step--active" data-step-progress="1" style="left: 15%"><span class="progress__text">Member Information</span></div>
+                <div class="two progress__step" data-step-progress="2" style="left: 32.5%"><span class="progress__text">Vehicle Information</span></div>
+                <div class="three progress__step" data-step-progress="3" style="left: 50%"><span class="progress__text">Payment Information</span></div>
+                <div class="four progress__step" data-step-progress="4" style="left: 67.5%"><span class="progress__text">Enrollment Summary</span></div>
+                <div class="five progress__step" data-step-progress="5" style="left: 85%"><span class="progress__text">Enrollment Confirmation</span></div>
+                <div class="progress-bar progress--enrollment__current" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form action="" class="needs-validation" novalidate>
+                <div class="form-group row">
+                    <label class="col-lg-4 text-lg-right col-form-label" for="RACarMaxFirstname">First Name</label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" id="RACarMaxFirstname" placeholder="First Name" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 text-lg-right col-form-label" for="RACarMaxLastname">Last Name</label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" id="RACarMaxLastname" placeholder="Last Name" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 text-lg-right col-form-label" for="RACarMaxPhone">Phone</label>
+                    <div class="col-lg-8">
+                        <input type="tel" class="form-control" id="RACarMaxPhone" placeholder="Phone" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 text-lg-right col-form-label" for="RACarMaxAddress1">Address 1</label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" id="RACarMaxAddress1" placeholder="Address 1" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 text-lg-right col-form-label" for="RACarMaxAddress2">Address 2</label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" id="RACarMaxAddress2" placeholder="Address 2">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 text-lg-right col-form-label" for="RACarMaxCountry">Country</label>
+                    <div class="col-lg-8">
+                        <select class="form-control" id="RACarMaxCountry" required>
+                            <option value="">--SELECT Country--</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 text-lg-right col-form-label" for="RACarMaxState">State</label>
+                    <div class="col-lg-8">
+                        <select class="form-control" id="RACarMaxState" disabled required>
+                            <option value="">--SELECT State--</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 text-lg-right col-form-label" for="RACarMaxCity">City</label>
+                    <div class="col-lg-8">
+                        <select class="form-control" id="RACarMaxCity" disabled required>
+                            <option value="">--SELECT City--</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 text-lg-right col-form-label" for="RACarMaxZip">Zip</label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" id="RACarMaxZip" placeholder="Zip Code" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 text-lg-right col-form-label" for="RACarMaxEmail">E-mail</label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" id="RACarMaxEmail" placeholder="Email id" required>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row justify-content-around py-3">
+        <div class="col-4 text-left"><button id="prevPage" data-step="0" class="btn btn-primary btn--paging">Back</button></div>
+        <div class="col-4 text-right"><button id="nextPage" data-step="2" class="btn btn-primary btn--paging">Next</button></div>
+    </div>
+    ${require("../views/main/footer.html")}
+</div>
